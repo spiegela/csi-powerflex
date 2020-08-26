@@ -60,6 +60,12 @@ spec:
         app: {{ .Release.Name }}-node
     spec:
       serviceAccount: {{ .Release.Name }}-node
+      {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- range .Values.imagePullSecrets }}
+        - name: {{ . }}
+      {{- end }}
+      {{- end }}
       hostNetwork: true
       containers:  
         - name: driver

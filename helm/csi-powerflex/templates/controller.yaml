@@ -84,6 +84,12 @@ spec:
       labels:
         app: {{ .Release.Name }}-controller
     spec:
+      {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- range .Values.imagePullSecrets }}
+        - name: {{ . }}
+      {{- end }}
+      {{- end }}
       serviceAccount: {{ .Release.Name }}-controller
       containers:
         - name: attacher
