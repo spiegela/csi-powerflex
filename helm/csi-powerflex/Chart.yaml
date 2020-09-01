@@ -1,10 +1,10 @@
 name: csi-powerflex
-version: 1.1.5
+version: 1.2.0
 apiVersion: v2
-appVersion: 1.1.5
+appVersion: 1.2.0
 icon: https://avatars1.githubusercontent.com/u/34447988
 description: |
-  VxFlex OS CSI (Container Storage Interface) driver Kubernetes
+  PowerFlex CSI (Container Storage Interface) driver Kubernetes
   integration. This chart includes everything required to provision via CSI as
   well as a VxFlex OS StorageClass.
 keywords:
