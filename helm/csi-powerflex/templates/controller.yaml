@@ -128,7 +128,6 @@ spec:
           image: {{ required "Must provide the CSI snapshotter container image." .Values.images.snapshotter }}
           args:
             - "--csi-address=$(ADDRESS)"
-            - "--timeout=120s"
             - "--v=5"
           env:
             - name: ADDRESS
