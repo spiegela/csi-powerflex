@@ -77,19 +77,22 @@ storageClass:
 # IT IS RECOMMENDED YOU DO NOT CHANGE THE IMAGES TO BE DONLOADED.
 images:
   # "images.driver" defines the container images used for the driver container.
-  driver: spiegela/csi-powerflex:v1.2.0-pre
+  driver: dellemc/csi-vxflexos:v1.1.5.000R
 
   # "images.attacher" defines the container images used for the csi attacher
   # container.
-  attacher: quay.io/k8scsi/csi-attacher:v3.0.0
+  #attacher: quay.io/k8scsi/csi-attacher:v0.4.2 #for CSI 0.3.0 only (obsolete)
+  attacher: quay.io/k8scsi/csi-attacher:v1.0.1 #doesn't work with CSI 0.3.0 driver
 
   # "images.provisioner" defines the container images used for the csi provisioner
   # container.
-  provisioner: quay.io/k8scsi/csi-provisioner:v2.0.0
+  #provisioner: quay.io/k8scsi/csi-provisioner:v0.4.2 #for CSI 0.3.0 only (obsolete)
+  provisioner: quay.io/k8scsi/csi-provisioner:v1.0.1 #doesn't work with CSI 0.3.0 driver
 
   # "images.snapshotter" defines the container image used for the csi snapshotter
-  snapshotter: quay.io/k8scsi/csi-snapshotter:v2.1.1
+  snapshotter: quay.io/k8scsi/csi-snapshotter:v1.0.1
 
   # "images.registrar" defines the container images used for the csi registrar
   # container.
-  registrar: quay.io/k8scsi/csi-node-driver-registrar:v2.0.0
+  #registrar: quay.io/k8scsi/driver-registrar:v0.4.2 #for CSI 0.3.0 only (obsolete)
+  registrar: quay.io/k8scsi/csi-node-driver-registrar:v1.0.2 #doesn't work with CSI 0.3.0 driver
